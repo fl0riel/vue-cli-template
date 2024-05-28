@@ -1,0 +1,167 @@
+@import "utils/vars.css";
+@import "utils/reset.css";
+
+html {
+    line-height: var(--mainLineHeight);
+    font-size: var(--mainFontSize);
+    color: var(--mainFontColor);
+    height: 100%;
+}
+
+@media screen and (max-width: var(--desktopWidth)) {
+    html {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: var(--tableWidth)) {
+    html {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: var(--phoneWidth)) {
+    html {
+        font-size: 14px;
+    }
+}
+
+body {
+    font-family: var(--mainFont);
+    font-size: var(--mainFontSize);
+    font-weight: var(--mainFontWeight);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+input,
+textarea,
+select,
+button {
+    border: 1px solid var(--border-base);
+}
+
+a {
+    text-decoration: none;
+}
+
+ul,
+li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+footer,
+/* also footer if footer without section */
+section,
+.section {
+    position: relative;
+    padding: 40px 0;
+}
+
+@media screen and (max-width: var(--desktopWidth)) {
+    footer,
+    section,
+    .section {
+        padding: 36px 0;
+    }
+}
+
+@media screen and (max-width: var(--desktopWidth)) {
+    footer,
+    section,
+    .section {
+        padding: 28px 0;
+    }
+}
+
+@media screen and (max-width: var(--desktopWidth)) {
+    footer,
+    section,
+    .section {
+        padding: 20px 0;
+    }
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0 auto;
+}
+
+.wrapper-content {
+    display: flex;
+    flex-direction: column;
+    min-height: 70vh;
+    margin-top: 80px; /* if header is fixed do mt: headerHeight */
+}
+
+.container {
+    position: relative;
+    flex: 0 0 auto;
+    margin: 0 auto;
+    width: 100%;
+    max-width: var(--lgDesktopWidth);
+}
+
+@media screen and (max-width: var(--lgDesktopWidth)) {
+    .container {
+        padding: 0 16px;
+    }
+}
+
+@media screen and (max-width: var(--smDesktopWidth)) {
+    .container {
+        max-width: var(--tableWidth);
+    }
+}
+
+@media screen and (max-width: var(--tableWidth)) {
+    .container {
+        max-width: var(--smTableWidth);
+    }
+}
+
+@media screen and (max-width: var(--smTableWidth)) {
+    .container {
+        max-width: var(--phoneWidth);
+    }
+}
+
+@media screen and (max-width: var(--phoneWidth)) {
+    .container {
+        max-width: var(--smPhoneWidth);
+    }
+}
+
+.view-sm {
+    max-width: 700px;
+
+    &.isCenter {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@import "./common/_common.css";
+@import "./helpers/_helpers.css";
