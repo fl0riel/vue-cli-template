@@ -1,40 +1,23 @@
 <template>
   <div class="wrapper">
-    <TheHeader :title="title" :links="links" />
+    <TheHeader />
     <div class="wrapper-content">
       <div class="container">
         <h1>Hello World!</h1>
       </div>
     </div>
-    <TheFooter :links="links" />
+    <TheFooter />
   </div>
 </template>
 
 <script>
-import TheHeader from "@/components/TheHeader";
-import TheFooter from "@/components/TheFooter";
+import TheHeader from "@/components/TheHeader.vue";
+import TheFooter from "@/components/TheFooter.vue";
 
 export default {
   components: {
     TheHeader,
     TheFooter,
-  },
-  data() {
-    return {
-      title: "Template",
-      links: [
-        {
-          title: "Home",
-          alias: "home",
-          url: "/",
-        },
-        {
-          title: "About",
-          alias: "about",
-          url: "/about",
-        },
-      ],
-    };
   },
 };
 </script>

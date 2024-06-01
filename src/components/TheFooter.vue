@@ -11,18 +11,13 @@
 </template>
 
 <script>
+import { links } from "@/config";
+
 export default {
-    props: {
-        links: {
-            type: Array,
-            default: () => [
-                {
-                title: "Home",
-                alias: "home",
-                url: "/",
-                },
-            ],
-        },
+    data() {
+        return {
+            links: links,
+        };
     },
 };
 </script>
