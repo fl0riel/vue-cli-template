@@ -1,4 +1,11 @@
-# vue-cli-template
+# In this application:
+- Full customization of the template on Vue CLI
+- Installing and configuring Vue-router for Vue.js 3
+- Dynamic redraw without reloading the page
+- Dynamic navigation and links
+- Processing non-existent routes
+- Hashes and mods for the router
+- General config setup
 
 ## Project setup
 ```

@@ -1,3 +1,5 @@
 <template>
-    <p>Page Home</p>
+    <div class="md-body">
+        <p>Hello World!</p>
+    </div>
 </template>
