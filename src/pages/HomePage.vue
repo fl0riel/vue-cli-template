@@ -2,7 +2,11 @@
   <div class="md-body">
     <p>Hello World!</p>
     <div class="card__wrapper" v-for="item in items" :key="item.id">
-        <CardInfo :name="`${item.lvl} lvl`" :title="item.title"/>
+        <CardInfo :name="`${item.lvl} lvl`" :title="item.title">
+            <template v-slot:body>
+                {{   item.description   }}
+            </template>
+        </CardInfo>
     </div>
   </div>
 </template>

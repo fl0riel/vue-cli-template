@@ -3,7 +3,7 @@
     <span class="card-name">{{  name  }}</span>
     <span class="card-title">{{ title }}</span>
     <div class="card-body">
-      Card-body
+      <slot name="body"></slot>
     </div>
   </div>
 </template>
