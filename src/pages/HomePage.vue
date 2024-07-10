@@ -10,6 +10,7 @@
 </template>
 
 <script>
+import items from "@/seeders/items.js"; 
 import CardInfo from "@/components/UI/CardInfo.vue";
 
 export default {
@@ -18,22 +19,7 @@ export default {
   },
   data() {
     return {
-        items: [
-            {
-                id: 1,
-                title: "Archer",
-                description: "Lorem ipsum...",
-                img: require("@/assets/img/archer.png"),
-                lvl: 4,
-            },
-            {
-                id: 2,
-                title: "Wizard",
-                description: "Lorem ipsum...",
-                img: require("@/assets/img/wizard.png"),
-                lvl: 5,
-            },
-        ]
+      items: items
     };
   },
 };
