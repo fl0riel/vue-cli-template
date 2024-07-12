@@ -10,13 +10,13 @@
   &.false {
     color: #ff5722;
     &:before {
-      background: #ff5722;
+      background-color: #ff5722;
     }
   }
   &.true {
     color: #8bc34a;
     &:before {
-      background: #8bc34a;
+      background-color: #8bc34a;
     }
   }
 }

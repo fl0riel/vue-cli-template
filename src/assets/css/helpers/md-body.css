@@ -19,7 +19,7 @@
 .md-body pre,
 .md-body ul {
   margin-top: 0;
-  margin-bottom: calc(16px / var(--mainFontSize) * 1rem); /* px to rem */
+  margin-bottom: calc(16 / var(--mainFontSizeValue) * 1rem); /* px to rem */
 }
 
 .md-body a {
@@ -123,7 +123,7 @@ ul > li:first-child > ul > li {
   margin-block-end: 1em;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
-  padding-inline-start: calc(40px / var(--mainFontSize) * 1rem); /* px to rem */
+  padding-inline-start: calc(40 / var(--mainFontSizeValue) * 1rem); /* px to rem */
   li {
     position: relative;
     margin-bottom: calc(1.82em / 2);
@@ -137,12 +137,12 @@ ul > li:first-child > ul > li {
   list-style: none;
   li {
     position: relative;
-    padding-left: calc(40px / var(--mainFontSize) * 1rem); /* px to rem */;
-    margin-bottom: calc(20px / var(--mainFontSize) * 1rem); /* px to rem */;
+    padding-left: calc(40 / var(--mainFontSizeValue) * 1rem); /* px to rem */;
+    margin-bottom: calc(20 / var(--mainFontSizeValue) * 1rem); /* px to rem */;
     &:before {
       display: inline-block;
       position: absolute;
-      left: calc(18px / var(--mainFontSize) * 1rem); /* px to rem */;
+      left: calc(18 / var(--mainFontSizeValue) * 1rem); /* px to rem */;
       counter-increment: list;
       content: counter(list) ". ";
     }
