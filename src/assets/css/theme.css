@@ -44,6 +44,9 @@ body {
     min-height: 260px;
     display: flex;
     flex-direction: column;
+    margin: 0;
+    padding: 0;
+    justify-content: space-between;
 }
 
 .card-stats {
@@ -69,4 +72,10 @@ body {
     position: relative;
     font-size: 24px;
     margin-bottom: 10px;
+}
+
+.stat {
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 12px;
 }
