@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper">
+  <div class="wrapper-person">
     <div v-if="item">
       <img :src="item.img" :alt="item.title" />
       <h1 class="title">
@@ -8,6 +8,12 @@
       <p>
         {{ item.description }}
       </p>
+      <div class="card-stats">
+        <div v-for="(stat, index) in item.info" :key="index" class="one-third">
+          <p class="stat-value">{{ stat.value }}</p>
+          <p class="stat">{{ stat.title }}</p>
+        </div>
+      </div>
       <router-link to="/" class="btn btnPrimary">Back to home</router-link>
     </div>
   </div>

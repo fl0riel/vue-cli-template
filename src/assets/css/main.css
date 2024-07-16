@@ -8,19 +8,20 @@ html {
     height: 100%;
 }
 
-@media screen and (max-width: var(--desktopWidth)) {
+/* Directly use the value here because custom properties cannot be evaluated within the media query conditions */
+@media screen and (max-width: 1280px) { 
     html {
         font-size: 16px;
     }
 }
 
-@media screen and (max-width: var(--tableWidth)) {
+@media screen and (max-width: 768px) {
     html {
         font-size: 15px;
     }
 }
 
-@media screen and (max-width: var(--phoneWidth)) {
+@media screen and (max-width: 480px) {
     html {
         font-size: 14px;
     }
@@ -78,7 +79,11 @@ section,
     padding: 40px 0;
 }
 
-@media screen and (max-width: var(--desktopWidth)) {
+footer {
+    background-color: var(--g-0);
+}
+
+@media screen and (max-width: 1280px) {
     footer,
     section,
     .section {
@@ -86,7 +91,7 @@ section,
     }
 }
 
-@media screen and (max-width: var(--desktopWidth)) {
+@media screen and (max-width: 768px) {
     footer,
     section,
     .section {
@@ -94,7 +99,7 @@ section,
     }
 }
 
-@media screen and (max-width: var(--desktopWidth)) {
+@media screen and (max-width: 480px) {
     footer,
     section,
     .section {
@@ -114,6 +119,15 @@ section,
     flex-direction: column;
     min-height: 70vh;
     margin-top: 80px; /* if header is fixed do mt: headerHeight */
+    margin-bottom: 40px;
+}
+
+.wrapper-person,
+.wrapper-person > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 70vh;
 }
 
 .container {
@@ -124,31 +138,31 @@ section,
     max-width: var(--lgDesktopWidth);
 }
 
-@media screen and (max-width: var(--lgDesktopWidth)) {
+@media screen and (max-width: 1400px) {
     .container {
         padding: 0 16px;
     }
 }
 
-@media screen and (max-width: var(--smDesktopWidth)) {
+@media screen and (max-width: 1024px) {
     .container {
         max-width: var(--tableWidth);
     }
 }
 
-@media screen and (max-width: var(--tableWidth)) {
+@media screen and (max-width: 768px) {
     .container {
         max-width: var(--smTableWidth);
     }
 }
 
-@media screen and (max-width: var(--smTableWidth)) {
+@media screen and (max-width: 640px) {
     .container {
         max-width: var(--phoneWidth);
     }
 }
 
-@media screen and (max-width: var(--phoneWidth)) {
+@media screen and (max-width: 480px) {
     .container {
         max-width: var(--smPhoneWidth);
     }
