@@ -1,7 +1,7 @@
 <template>
   <div class="">
     <p>Hello World!</p>
-    <carousel :items-to-show="3">
+    <carousel :breakpoints="breakpoints">
       <slide lass="card__wrapper" v-for="item in items" :key="item.id">
         <CardInfo
           :name="`${item.lvl} lvl`"
@@ -45,12 +45,24 @@ export default {
     CardInfo,
     Carousel,
     Slide,
-    Navigation,
+    Navigation
   },
   data() {
     return {
       items: items,
+      breakpoints: {
+        300: {
+          itemsToShow: 1
+          },
+        700: {
+          itemsToShow: 1.5,
+          snapAlign: 'start',
+        },
+        1250: {
+          itemsToShow: 3
+        }
+      }
     };
-  },
+  }
 };
 </script>
