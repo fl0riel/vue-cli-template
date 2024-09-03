@@ -31,6 +31,10 @@ export default {
   created() {
     const alias = this.$route.params.itemAlias;
     const item = items.find((el) => el.alias === alias);
+
+    if (!item) {
+      this.$router.push({ name: "404" });
+    } 
     this.item = item;
   },
 };
